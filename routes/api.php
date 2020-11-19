@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Event;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -20,4 +21,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 
 Route::get('/events', function () {
+    return Event::all();
 });
